@@ -9,6 +9,7 @@ User=daemon
 Group=daemon
 WorkingDirectory=/opt/schellenberg-mqtt/
 ExecStart=/usr/bin/python3 /opt/schellenberg-mqtt/schellenberg-mqtt-daemon.py
+ExecStartPost=/bin/sleep 300
 StandardOutput=null
 #StandardOutput=syslog
 #SyslogIdentifier=miflora
