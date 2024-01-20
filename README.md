@@ -72,12 +72,26 @@ In order to send a command, you just send a json string to the basetopic. This j
 Make sure all configurations and the MQTT broker are setup, before running the daemon. 
 
 ### Single Use
-`python3 schellenberg-mqtt-daemon.py`
 
-### Continuous Daemon/Service
+```
+sudo apt install python3-pip
+pip install Unidecode
+pip install paho.mqtt
+pip install sdnotify
+
+python3 schellenberg-mqtt-daemon.py
+
+```
+
+### Continuous Daemon/Service - Pip commands not required if installed for single use already
 Assuming you cloned the repository to `/opt/`, otherwise you need to change all paths accordingly
 
 ```
+sudo apt install python3-pip
+pip install Unidecode
+pip install paho.mqtt
+pip install sdnotify
+
 sudo cp /opt/schellenberg-mqtt/template.service /etc/systemd/system/schellenberg.service
 
 sudo systemctl daemon-reload
@@ -89,3 +103,6 @@ sudo systemctl status schellenberg.service
 
 sudo systemctl enable schellenberg.service
 ```
+
+### Permanent permissions for OS to USB stick
+https://askubuntu.com/questions/58119/changing-permissions-on-serial-port
