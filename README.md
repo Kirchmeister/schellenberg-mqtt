@@ -79,6 +79,8 @@ pip install Unidecode
 pip install paho.mqtt
 pip install sdnotify
 
+sudo chmod 666 /dev/ttyACM0
+
 python3 schellenberg-mqtt-daemon.py
 
 ```
@@ -88,6 +90,7 @@ Assuming you cloned the repository to `/opt/`, otherwise you need to change all 
 
 ```
 sudo apt install python3-pip
+sudo -i
 pip install Unidecode
 pip install paho.mqtt
 pip install sdnotify
@@ -105,5 +108,12 @@ sudo systemctl enable schellenberg.service
 ```
 
 ### Permanent permissions for OS to USB stick
-sudo chmod 666 /dev/ttyACM0 is only granting permissions at run time. To make sure you retain the permissions after reboot, you can follow the following:
+sudo chmod 666 /dev/ttyACM0 is only granting permissions until reboot. To make sure you retain the permissions after reboot, you can follow the following:
 https://askubuntu.com/questions/58119/changing-permissions-on-serial-port
+
+`sudo vi /etc/udev/rules.d/50-myusb.rules`\
+Add the next line:\
+`KERNEL=="ttyACM[0-9]*",MODE="0666"`
+
+hit the esc key and type `:wq`\
+`sudo udevadm control --reload`
