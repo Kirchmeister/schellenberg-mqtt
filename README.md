@@ -105,4 +105,5 @@ sudo systemctl enable schellenberg.service
 ```
 
 ### Permanent permissions for OS to USB stick
+sudo chmod 666 /dev/ttyACM0 is only granting permissions at run time. To make sure you retain the permissions after reboot, you can follow the following:
 https://askubuntu.com/questions/58119/changing-permissions-on-serial-port
