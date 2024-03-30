@@ -26,8 +26,8 @@ I tried to write a step by step guide to pair one rollershutter with the USB:
     1.  There seems to be an allowed range for these device ids (e.g. `00` and `01` was not working for me). So just use something in the middle between `00` and `FF`..
 4.  Activate the program mode of your roller shutter (according the manual of your rollershutter)
 5.  Within 10 seconds (!) after the activation of the program mode, you must send the pairing command to your device by using 'echo'.
-    1.  The structure of the command looks as follows: `ssXX9600000`  where XX is the one byte id you selected for your device (e.g. `C4`)
-    2.  So, an example command with the device id `C4` would be `echo 'ssC49600000' > /dev/ttyACM0` (if your device is `ttyACM0`, otherwise replace accordingly)
+    1.  The structure of the command looks as follows: `ssXX9400000`  where XX is the one byte id you selected for your device (e.g. `C4`)
+    2.  So, an example command with the device id `C4` would be `echo 'ssC49400000' > /dev/ttyACM0` (if your device is `ttyACM0`, otherwise replace accordingly)
 6.  The successful pairing should end the program mode of the rollershutter and you should be able to send commands now
 7.  Test the pairing by sending e.g. a down command to your roller shutter 
     1.  `echo 'ssC49010000' > /dev/ttyACM0` (still, I am using `C4` as device ID so replace it with your selected one)
