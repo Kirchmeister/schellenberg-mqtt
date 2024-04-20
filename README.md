@@ -81,7 +81,7 @@ sudo apt install python3-pip
 pip install Unidecode
 pip install paho.mqtt
 pip install sdnotify
-pip install serial
+pip install pyserial
 
 sudo chmod 666 /dev/ttyACM0
 
@@ -98,7 +98,7 @@ sudo -i
 pip install Unidecode
 pip install paho.mqtt
 pip install sdnotify
-pip install serial
+pip install pyserial
 
 sudo cp /opt/schellenberg-mqtt/template.service /etc/systemd/system/schellenberg.service
 
