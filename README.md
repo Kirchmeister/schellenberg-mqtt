@@ -1,6 +1,6 @@
 # schellenberg-mqtt
 
-Please note, this is a fork which I am using for my own integration, since I had some specfic installation requirements. I am happy for you to use it as well. Most ist certainly not created or documented by my, but I have amended where it was appropriate for me. If it works for you, fine. If not, please have a look at the original repo.
+Please note, this is a fork which I am using for my own integration, since I had some specfic installation requirements. I am happy for you to use it as well. Most ist certainly not created or documented by me, but I have amended where it was appropriate for me. If it works for you, fine. If not, please have a look at the original repo.
 
 Linux Daemon which allows to send commands to rollershutters from Schellenberg through MQTT. Most of the MQTT related part was taken from [The miflora MQTT daemon from ThomDietrich](https://github.com/ThomDietrich/miflora-mqtt-daemon). Furthemore I used information from [LoPablos reverse engineering of the schellenberg USB](https://github.com/LoPablo/schellenberg-qivicon-usb). Thank you all for your effort!
 
